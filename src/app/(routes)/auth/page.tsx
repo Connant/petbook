@@ -1,11 +1,13 @@
-import Image from 'next/image';
+import { Metadata } from 'next';
 
-import styles from './page.module.css';
+export const metadata: Metadata = {
+	title: 'Auth page',
+};
 
-export default function Home() {
+export default function AuthPage() {
 	return (
 		<div>
-			Home page
+			Auth page
 			<a href="/">home</a>
 			<a href="/auth">auth</a>
 			<a href="/books/1">books/1</a>
