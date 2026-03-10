@@ -8,7 +8,8 @@
 		"start": "next start",
 		"lint": "eslint",
 		"lint:styles": "stylelint \"src/**/*.{scss,css}\"",
-		"lint:styles:fix": "stylelint \"src/**/*.{scss,css}\" --fix"
+		"lint:styles:fix": "stylelint \"src/**/*.{scss,css}\" --fix",
+		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
 		"next": "16.1.6",
