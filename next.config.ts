@@ -1,15 +1,8 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-	reactCompiler: true,
-	images: {
-		remotePatterns: [
-			{
-				protocol: 'https',
-				hostname: 'www.gutenberg.org',
-			},
-		],
-	},
+  /* config options here */
+  reactCompiler: true,
 };
 
 export default nextConfig;
