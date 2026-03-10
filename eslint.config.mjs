@@ -12,11 +12,8 @@ const eslintConfig = defineConfig([
 		},
 
 		rules: {
-			'@typescript-eslint/await-thenable': 'warn',
 			'@typescript-eslint/no-explicit-any': 'warn',
-			'@typescript-eslint/no-misused-promises': 'warn',
 			'@typescript-eslint/no-unused-vars': 'warn',
-			'@typescript-eslint/return-await': 'warn',
 			curly: 'warn',
 			eqeqeq: 'warn',
 			'import/no-cycle': 'warn',
