@@ -1,0 +1,114 @@
+export default {
+	extends: ['stylelint-config-standard-scss'],
+	ignoreFiles: [
+		'**/*.js',
+		'**/*.jsx',
+		'**/*.ts',
+		'**/*.tsx',
+		'.next/**',
+		'out/**',
+		'build/**',
+		'node_modules/**',
+	],
+	rules: {
+		'no-descending-specificity': null,
+		'selector-class-pattern': [
+			'^[a-z][a-zA-Z0-9]*$',
+			{
+				message: 'для scss modules используй camelCase, например bookCard или readerTitle',
+			},
+		],
+		'scss/dollar-variable-pattern': [
+			'^[a-z][a-z0-9-]*$',
+			{
+				message: 'scss-переменные должны быть в kebab-case, например $color-primary',
+			},
+		],
+
+		'order/properties-order': [
+			[
+				{
+					groupName: 'positioning',
+					emptyLineBefore: 'never',
+					properties: ['position', 'top', 'right', 'bottom', 'left', 'z-index'],
+				},
+				{
+					groupName: 'display',
+					emptyLineBefore: 'always',
+					properties: [
+						'display',
+						'align-items',
+						'justify-content',
+						'align-self',
+						'flex',
+						'flex-direction',
+						'flex-wrap',
+						'gap',
+						'grid',
+						'grid-template-columns',
+						'grid-template-rows',
+					],
+				},
+				{
+					groupName: 'box-model',
+					emptyLineBefore: 'always',
+					properties: [
+						'width',
+						'min-width',
+						'max-width',
+						'height',
+						'min-height',
+						'max-height',
+						'margin',
+						'margin-top',
+						'margin-right',
+						'margin-bottom',
+						'margin-left',
+						'padding',
+						'padding-top',
+						'padding-right',
+						'padding-bottom',
+						'padding-left',
+						'overflow',
+					],
+				},
+				{
+					groupName: 'typography',
+					emptyLineBefore: 'always',
+					properties: [
+						'font',
+						'font-family',
+						'font-size',
+						'font-weight',
+						'line-height',
+						'letter-spacing',
+						'text-align',
+						'text-transform',
+						'text-decoration',
+						'color',
+					],
+				},
+				{
+					groupName: 'visual',
+					emptyLineBefore: 'always',
+					properties: [
+						'background',
+						'background-color',
+						'border',
+						'border-radius',
+						'box-shadow',
+						'opacity',
+					],
+				},
+				{
+					groupName: 'animation',
+					emptyLineBefore: 'always',
+					properties: ['transform', 'transition', 'animation'],
+				},
+			],
+			{
+				unspecified: 'bottomAlphabetical',
+			},
+		],
+	},
+};
