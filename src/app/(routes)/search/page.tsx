@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
 	title: 'Search books',
@@ -8,11 +9,11 @@ export default function SearchPage() {
 	return (
 		<div>
 			Search page
-			<a href="/">home</a>
-			<a href="/auth">auth</a>
-			<a href="/books/1">books/1</a>
-			<a href="/read/1">read/1</a>
-			<a href="/search">search</a>
+			<Link href="/">home</Link>
+			<Link href="/auth">auth</Link>
+			<Link href="/books/1">books/1</Link>
+			<Link href="/read/1">read/1</Link>
+			<Link href="/search">search</Link>
 		</div>
 	);
 }

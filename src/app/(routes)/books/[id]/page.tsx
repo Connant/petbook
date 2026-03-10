@@ -1,24 +1,29 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
 type Props = {
-	params: { id: string };
+	params: Promise<{ id: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { id } = await params;
+
 	return {
-		title: `Book ${params.id}`,
+		title: `Book ${id}`,
 	};
 }
 
-export default function BookPage() {
+export default async function BookPage({ params }: Props) {
+	const { id } = await params;
+
 	return (
 		<div>
-			Book page
-			<a href="/">home</a>
-			<a href="/auth">auth</a>
-			<a href="/books/1">books/1</a>
-			<a href="/read/1">read/1</a>
-			<a href="/search">search</a>
+			Book page {id}
+			<Link href="/">home</Link>
+			<Link href="/auth">auth</Link>
+			<Link href="/books/1">books/1</Link>
+			<Link href="/read/1">read/1</Link>
+			<Link href="/search">search</Link>
 		</div>
 	);
 }
