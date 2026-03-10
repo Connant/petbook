@@ -1,5 +1,6 @@
 export default {
 	extends: ['stylelint-config-standard-scss'],
+	plugins: ['stylelint-order'],
 	ignoreFiles: [
 		'**/*.js',
 		'**/*.jsx',
@@ -12,6 +13,7 @@ export default {
 	],
 	rules: {
 		'no-descending-specificity': null,
+		'declaration-empty-line-before': null,
 		'selector-class-pattern': [
 			'^[a-z][a-zA-Z0-9]*$',
 			{
@@ -29,7 +31,6 @@ export default {
 			[
 				{
 					groupName: 'positioning',
-					emptyLineBefore: 'never',
 					properties: ['position', 'top', 'right', 'bottom', 'left', 'z-index'],
 				},
 				{

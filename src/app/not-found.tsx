@@ -1,8 +1,10 @@
+import Link from 'next/link';
+
 export default function NotFound() {
 	return (
 		<div>
 			<h1>404</h1>
-			<a href="/">Go back to home</a>
+			<Link href="/">Go back to home</Link>
 		</div>
 	);
 }

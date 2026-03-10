@@ -1,16 +1,14 @@
-import Image from 'next/image';
-
-import styles from './page.module.css';
+import Link from 'next/link';
 
 export default function Home() {
 	return (
 		<div>
 			Home page
-			<a href="/">home</a>
-			<a href="/auth">auth</a>
-			<a href="/books/1">books/1</a>
-			<a href="/read/1">read/1</a>
-			<a href="/search">search</a>
+			<Link href="/">home</Link>
+			<Link href="/auth">auth</Link>
+			<Link href="/books/1">books/1</Link>
+			<Link href="/read/1">read/1</Link>
+			<Link href="/search">search</Link>
 		</div>
 	);
 }

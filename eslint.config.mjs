@@ -7,16 +7,13 @@ const eslintConfig = defineConfig([
 	...nextVitals,
 	...nextTs,
 	{
-		rules: {
-			plugins: {
-				import: importPlugin,
-			},
+		plugins: {
+			import: importPlugin,
+		},
 
-			'@typescript-eslint/await-thenable': 'warn',
+		rules: {
 			'@typescript-eslint/no-explicit-any': 'warn',
-			'@typescript-eslint/no-misused-promises': 'warn',
 			'@typescript-eslint/no-unused-vars': 'warn',
-			'@typescript-eslint/return-await': 'warn',
 			curly: 'warn',
 			eqeqeq: 'warn',
 			'import/no-cycle': 'warn',
